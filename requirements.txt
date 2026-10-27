@@ -1,0 +1,10 @@
+# Sem dependências Python/pip no PC servidor e sem Playwright.
+# Canal: Node puro via CDP (http + WebSocket nativos do Node). Story: PowerShell 5.1 + UI Automation
+# + 3 helpers Node via CDP. Versões em produção no PC (FATO, medidas em 2026-10-26):
+#   Node.js 22.15.0   (WebSocket nativo; só `require` de módulos embutidos: http, https, fs, path, child_process)
+#   Chrome  155.0.8059.85  (--remote-debugging-port=9222, perfil dedicado)
+#   Windows PowerShell 5.1 (System.Windows.Forms / System.Windows.Automation)
+# O `playwright-core` 1.59.1 existe no PC (pasta playwright_cms), mas NENHUM script de story/canal o usa.
+#
+# Lado VPS (referência em codigo_referencia/): Python 3 com `requests`; bash + curl.
+requests
